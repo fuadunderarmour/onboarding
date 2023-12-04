@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 'use strict';
 
 var ProductMgr = require('dw/catalog/ProductMgr');
