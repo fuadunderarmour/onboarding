@@ -121,6 +121,7 @@ function getTotalQuantity(items) {
 function ProductLineItems(productLineItems, view) {
     if (productLineItems) {
         this.items = createProductLineItemsObject(productLineItems, view);
+
         this.totalQuantity = getTotalQuantity(productLineItems);
     } else {
         this.items = [];
@@ -129,5 +130,4 @@ function ProductLineItems(productLineItems, view) {
 }
 
 ProductLineItems.getTotalQuantity = getTotalQuantity;
-
 module.exports = ProductLineItems;

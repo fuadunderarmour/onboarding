@@ -176,6 +176,7 @@ function addLineItem(
     }
 
     productLineItem.setQuantityValue(quantity);
+    productLineItem.product.custom.productinfo;
 
     return productLineItem;
 }
@@ -340,6 +341,7 @@ function addProductToCart(currentBasket, productId, quantity, childProducts, opt
     var productLineItems = currentBasket.productLineItems;
     var productQuantityInCart;
     var quantityToSet;
+
     var optionModel = productHelper.getCurrentOptionModel(product.optionModel, options);
     var result = {
         error: false,
@@ -378,7 +380,6 @@ function addProductToCart(currentBasket, productId, quantity, childProducts, opt
         productQuantityInCart = productInCart.quantity.value;
         quantityToSet = quantity ? quantity + productQuantityInCart : productQuantityInCart + 1;
         availableToSell = productInCart.product.availabilityModel.inventoryRecord.ATS.value;
-
         if (availableToSell >= quantityToSet || perpetual) {
             productInCart.setQuantityValue(quantityToSet);
             result.uuid = productInCart.UUID;

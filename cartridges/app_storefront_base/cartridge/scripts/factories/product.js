@@ -25,6 +25,7 @@ module.exports = {
             return product;
         }
         var productType = productHelper.getProductType(apiProduct);
+        // var information = params.product.custom.productinfo;
         var options = null;
         var promotions;
 
@@ -40,6 +41,7 @@ module.exports = {
                     variables: params.variables,
                     lineItem: params.lineItem,
                     productType: productType
+               
                 };
 
                 switch (productType) {

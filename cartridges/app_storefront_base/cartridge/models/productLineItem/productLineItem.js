@@ -26,6 +26,7 @@ module.exports = function productLineItem(product, apiProduct, options) {
     });
     productDecorators.availability(product, options.quantity, apiProduct.minOrderQuantity.value, apiProduct.availabilityModel);
 
+    productLineItemDecorators.information(product, apiProduct.custom.productinfo);
     productLineItemDecorators.quantity(product, options.quantity);
     productLineItemDecorators.gift(product, options.lineItem);
     productLineItemDecorators.appliedPromotions(product, options.lineItem);

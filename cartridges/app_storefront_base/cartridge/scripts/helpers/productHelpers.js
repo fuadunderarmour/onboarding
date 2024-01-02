@@ -1,10 +1,9 @@
-/* eslint-disable linebreak-style */
+
 'use strict';
 
 var collections = require('*/cartridge/scripts/util/collections');
 var urlHelper = require('*/cartridge/scripts/helpers/urlHelpers');
 
-// eslint-disable-next-line linebreak-style
 /**
  * @typedef {Object} ProductOptionValues
  * @type Object
@@ -106,7 +105,6 @@ function getCurrentOptionModel(optionModel, selectedOptions) {
 
 /**
  * Generates a URL with the currently selected product options
- *
  * @param {dw.catalog.ProductOptionModel} optionModel - The product's option model
  * @param {string} [action] - URL endpoint
  * @return {string} - URL with option query params

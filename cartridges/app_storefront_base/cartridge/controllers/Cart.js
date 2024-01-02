@@ -24,7 +24,7 @@ server.get('MiniCart', server.middleware.include, function (req, res, next) {
 
     var currentBasket = BasketMgr.getCurrentBasket();
     var quantityTotal;
-
+    
     if (currentBasket) {
         quantityTotal = currentBasket.productQuantityTotal;
     } else {
@@ -97,6 +97,7 @@ server.post('AddProduct', function (req, res, next) {
                         childProducts,
                         pidOptions
                     );
+
                     if (PIDObjResult.error) {
                         result.error = PIDObjResult.error;
                         result.message = PIDObjResult.message;
@@ -111,6 +112,7 @@ server.post('AddProduct', function (req, res, next) {
     }
 
     var quantityTotal = ProductLineItemsModel.getTotalQuantity(currentBasket.productLineItems);
+//    var informations = currentBasket.productLineItems.product.custom.productinfo;
     var cartModel = new CartModel(currentBasket);
 
     var urlObject = {
@@ -199,7 +201,7 @@ server.get(
         }
 
         res.setViewData({ reportingURLs: reportingURLs });
-
+        
         var basketModel = new CartModel(currentBasket);
         res.render('cart/cart', basketModel);
         next();

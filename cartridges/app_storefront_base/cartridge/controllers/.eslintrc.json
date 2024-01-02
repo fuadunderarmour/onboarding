@@ -1,6 +1,15 @@
 {
     "plugins": ["sitegenesis"],
+    "parserOptions": {
+        "ecmaVersion": 6
+      },
+      "env": {
+        "browser": true,
+        "node": true,
+        "es6": true
+      },
     "rules": {
-        "sitegenesis/no-global-require": ["error"]
+        "sitegenesis/no-global-require": ["error"],
+        "linebreak-style": ["error", "windows"]
     }
 }
