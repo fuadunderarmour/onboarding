@@ -1,0 +1,33 @@
+{
+    "step-types": {
+        "script-module-step": [
+            {
+                "@type-id": "custom.checkProductInfo",
+                "@support-parallel-execution": "false",
+                "@support-site-context": "true",
+                "@support-organization-context": "false",
+                "description": "Add products having information attr to a file",
+                "module": "app_custom_cartridge/cartridge/scripts/productList/checkPdtInfo.js",
+                "function": "Process",
+                "transactional": "false",
+                "parameters": {},
+                "status-codes": {
+                    "status": [
+                        {
+                            "@code": "ERROR",
+                            "description": "Used when an error occurred."
+                        },
+                        {
+                            "@code": "OK",
+                            "description": "Used when everything went well."
+                        },
+                        {
+                            "@code": "WARN",
+                            "description": "Used when small, but acceptable problems occurred."
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}
