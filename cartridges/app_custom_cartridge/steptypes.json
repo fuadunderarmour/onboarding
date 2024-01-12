@@ -1,0 +1,44 @@
+{
+    "step-types": {
+        "script-module-step": [
+            {
+                "@type-id": "custom.productListExport",
+                "@support-parallel-execution": "false",
+                "@support-site-context": "true",
+                "@support-organization-context": "false",
+                "description": "export products having information attribute",
+                "module": "app_custom_cartridge/cartridge/scripts/productList/productListExport.js",
+                "function": "Process",
+                "transactional": "false",
+                "parameters": {
+                    "parameter":[
+                        {
+                            "@name": "exportFile",
+                            "@type": "string",
+                            "@required": "true",
+                            "@trim": "true",
+                            "description": "export the products contains the information attribute",
+                            "default-value": "exportlist_1"
+                        }     
+                    ]
+                },
+                "status-codes": {
+                    "status": [
+                        {
+                            "@code": "ERROR",
+                            "description": "Used when an error occurred."
+                        },
+                        {
+                            "@code": "OK",
+                            "description": "Used when everything went well."
+                        },
+                        {
+                            "@code": "WARN",
+                            "description": "Used when small, but acceptable problems occurred."
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}
